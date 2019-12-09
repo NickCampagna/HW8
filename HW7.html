@@ -1,0 +1,62 @@
+<!--Page by Nicholas Campagna
+nicholas_campagna@student.uml.edu
+I am a student at UMass Lowell, in COMP4610 (or 91.61) GUI Programming 1
+File Created November 13th, 2019
+This is an HTML file that is edited from my HW4 to preserve the same style while fulfilling HW6 requirements. -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The page is down there, silly.</title>
+        <link href="css\HW7.css" rel="stylesheet">
+        <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel = "stylesheet">
+    </head>
+    <body><!-- page content -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"></script>
+    <div id="page">
+        <!-- Title, Main Content -->
+        <h1>Nick Campagna Homework 7</h1>
+        <p>Fill out the form below, enter the first and last numbers for the column and row of a multiplication table that will be generated based off of input.</p>
+        <h2>Table Dimensions:</h2>
+        <!-- Figured out that action="javascript:void(0);" would make the page not refresh from https://stackoverflow.com/questions/1818249/form-with-no-action-and-where-enter-does-not-reload-page -->
+        <form id="form" onSubmit="addTab()" action="javascript:void(0);">
+            Enter the first and last number for the row:<br>
+            <label for="x1">X1:</label>
+            <input type="text" name="x1">
+            <div id="x1Slider"></div><br>
+            <label for="x2">X2:</label>
+            <input type="text" name="x2">
+            <div id="x2Slider"></div><br>
+            Enter the first and last number for the column:<br>
+            <label for="y1">Y1:</label>
+            <input type="text" name="y1">
+            <div id="y1Slider"></div><br>
+            <label for="y2">Y2:</label>
+            <input type="text" name="y2">
+            <div id="y2Slider"></div><br>
+            <!--<button onclick="buildTable()">Input</button>-->
+            <input type="submit" value="Submit">
+            <button id="add_tab">Add Tab</button>
+        </form>
+        <div id="debug">If you can read this, the javascript isn't working right.</div>
+        <!--<table id="myTable"></table>-->
+        <div id="myTable0"></div>
+        <div id="myTabs">
+          <ul>
+            <li><a href="#tabs-1">Table1</a> <span class="ui-icon ui-icon-close" role="presentation">Remove Tab</span></li>
+          </ul>
+          <div id="tabs-1">
+            <div id="myTable1"></div>
+          </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/HW7.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/sliders.js"></script>
+    <script src="js/tabs.js"></script>
+    </body>
+</html>

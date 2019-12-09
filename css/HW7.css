@@ -1,0 +1,91 @@
+/*Page by Nicholas Campagna
+nicholas_campagna@student.uml.edu
+I am a student at UMass Lowell, in COMP4610 (or 91.61) GUI Programming 1
+File Created November 13th, 2019
+This is a css file edited from my HW4, to preserve the same style while fulfilling HW6 requirements*/
+
+/* Set height to 100 both in html and body to allow center to stretch
+over entire screen for aesthetic purposes*/
+html {
+    height: 100%;
+}
+
+/*Sets the font, color and margins. Background image is from the game
+Space Station 13. Margins added to show off background, height specified
+to allow page content to stretch over entire page*/
+body {
+    height: 100%;
+    background-image: url("../images/SS13-Space.jpg");
+    background-repeat: repeat;
+    color: #6666FF;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 0%;
+}
+
+/*Center part that stretches over entire page because height is 100%.
+Width and margins keep content centered, same with text-align.
+Border set to double cyan 10px and then animated to alter between
+cyan and blue with a neat bit of code later*/
+#page {
+  height: 100%;
+  margin: auto;
+  width: auto;
+  max-width: 940px;
+  min-width: 720px;
+  font-family: "Arial", Arial, monospace;
+  text-align: center;
+  padding: 20px;
+  border: 10px double cyan;
+  border-top-style: none;
+  border-bottom-style: none;
+  background-color: #222222;
+  animation: borderglow 5s infinite;
+}
+
+/*Sets up the horizontal list of assignment links. Used display inline-flex
+for this purpose.*/
+#assignments {
+  list-style-type: none;
+  display: inline-flex;
+  width: 570px;
+  padding: 5px;
+}
+
+/*Most of the stuff for the list has been moved specifically into
+a:link below to specify how much space the links should take up as well
+as what should change when the cursor hovers over it.*/
+/*li {
+  margin: auto;
+  background-color: #222288;
+}*/
+
+/*border and padding moved down here for reasons stated above, also uses
+display:block to make sure the links take up the whole block of space.
+Makes sure they're nice, pressable buttons rather than just text links.*/
+/*li a:link, a:visited {
+  border: 3px solid #6666FF;
+  padding: 15px;
+  display: block;
+  text-decoration: none;
+  color: #6666FF;
+}*/
+
+/*Changes that occur when a cursor moves over a link button, border, font and
+background color changes.*/
+/*li a:hover {
+  border: 3px solid cyan;
+  color: cyan;
+  background-color: black;
+}*/
+
+/*Keyframes! A neat trick I learned to animate certain elements. There's a
+lot that COULD be animated, but I chose to stick with a nice, subtle color
+fade for the borders rather than something that would screw with the page
+TOO much.*/
+@keyframes borderglow {
+  50% {border: 10px double blue;
+    border-top-style: none;
+    border-bottom-style: none;}
+}
